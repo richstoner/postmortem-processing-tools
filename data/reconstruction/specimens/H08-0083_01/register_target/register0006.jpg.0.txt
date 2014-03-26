@@ -1,0 +1,5 @@
+#Insight Transform File V1.0
+# Transform 0
+Transform: CenteredRigid2DTransform_double_2_2
+Parameters: -0.0747146 442.317 330.051 -21.2355 -13.9075
+FixedParameters: 

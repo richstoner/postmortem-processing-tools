@@ -1,0 +1,11 @@
+Modification to the INCF github example, original forked by Luis Ibanez from Kitware
+
+expecting 4 parameters        
+fixedImageFiles, outputImagefiles, files (from 0), type
+argv[1] argv[2] argv[3], argv[4]
+
+0 -> rigid xform, MeanSquaresImageToMetric, 
+1 -> rigid xform, NormalizedCorrelationImageToMetric
+2 -> rigid xform, MutualInformationImageToImageMetric
+3 -> rigid xform, GradientDifferenceImageToImageMetric
+4 -> rigid xform, CorrelationCoefficientHistogramImageToImageMetric
