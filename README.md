@@ -101,15 +101,19 @@ We are providing a vagrant box with this release [http://vagrantup.com](http://v
 
 	`cd postmortem-processing-tools`
 
-4. Launch the instance
+4. Launch the instance 
 
 	`vagrant up`
 
-5. Wait for the instance to boot, the go to [http://192.2.2.2](http://192.2.2.2) in a web browser for more information. 
+5. On first load, this will download the virtual machine image from vagrant cloud. It may take upto an hour to download (2.6GB, hosted on AWS S3). Once downloaded the instance will boot by itself. 
+
+6. After boot, go to [http://192.2.2.2](http://192.2.2.2) in a web browser for more information. 
 
 ### 3.3. Using the IPython notebooks
 
 Severa examples have been made availble as IPython ([http://ipython.org](http://ipython.org)) notebooks. Once the instance has booted, you can get to these notebooks by going to [http://192.2.2.2:8888](http://192.2.2.2:8888) in a web browser (chrome preferred). Be advised, the IPython notebooks have no restrictions in place regarding user access. Take proper precaution before making these ports available as public-facing web sites. 
+
+**Troubleshooting: ** If IPython does not appear to be running, first confirm the instance itself is runnning. Second, check the status of the IPython process via the Supervisor web interface: [http://192.2.2.2:9999](http://192.2.2.2:8888).
 
 ### 3.4. Navigating the source code
 
@@ -126,7 +130,9 @@ IPython notebooks are located in the /notebooks, and this documentation is locat
 
 ## 4. Details about the processing environment
 
-Base: hashicorp/precise64 (ubuntu 12.04.3)
+Currently on vagrant cloud: [https://vagrantcloud.com/richstoner/postmortem-ipython-precise64](https://vagrantcloud.com/richstoner/postmortem-ipython-precise64)
+
+Based on: hashicorp/precise64 (ubuntu 12.04.3)
 
 Here is a short list of what you'd need to build your own version of this environment:
 
@@ -213,8 +219,6 @@ Updated supervisor config to a) enable http and b) start ipython notebook (*Deta
 Running ImageJ / Fiji particle analysis requires a workstation with X11 running (or hours of experimentation with Xvfb). It also requires ~10G available RAM.
 
 Extracting points via scikit image requires a machine with 10G available RAM. This could be avoided by optimizing around the RGB->HSV conversion of the large in-memory images. 
-
-
 
 
 
