@@ -1,0 +1,9 @@
+/vagrant/bin/CMakeFiles/AffineImageReconstruction.dir
+/vagrant/bin/CMakeFiles/ImageReadImageSeriesWrite.dir
+/vagrant/bin/CMakeFiles/PrintImageInformation.dir
+/vagrant/bin/CMakeFiles/RigidBodyImageRegistration.dir
+/vagrant/bin/CMakeFiles/ShapeContinuityValidation.dir
+/vagrant/bin/CMakeFiles/SimpleImageReconstruction.dir
+/vagrant/bin/CMakeFiles/SpacingValidation.dir
+/vagrant/bin/CMakeFiles/image5.dir
+/vagrant/bin/CMakeFiles/image6.dir
