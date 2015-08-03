@@ -12,7 +12,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Every Vagrant virtual environment requires a box to build off of.
 
   # This specifies the postmortem box, hosted on s3, via vagrant cloud
-  config.vm.box = " richstoner/postmortem-ipython-precise64"
+  config.vm.box = "richstoner/postmortem-ipython-precise64"
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -32,7 +32,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider "virtualbox" do |vb|
     # Don't boot with headless mode
     # vb.gui = true
-  
+
     # Use VBoxManage to customize the VM. For example to change memory:
     vb.customize ["modifyvm", :id, "--memory", "4096"]
   end
